@@ -486,8 +486,8 @@ function checkSequence({ array }) {
     return array.filter(number => number.toString().length === 2).join("").includes("102030");
 };
 
-// [1,0,2,0,3,0]
-// [1, 2, 3, 10, 20, 30]
+// [1,0,2,0,3,0,5,5]
+// [1,2,3,10,20,30]
 
 // 37. Write a Javascript program to check two given integers and return 11 if either one is 11. Return their sum or difference if sum or difference is 11.
 
