@@ -245,6 +245,8 @@ function checkIfTwenty({ first, second }) {
 // Sample Output: 
 // y = 5 is greatest.
 
+//remove button input from the inputs
+
 function greatesOfThreeNumbers(inputs) {
     const array = Object.values(inputs);
     const maxNumber = Math.max(...array);
@@ -262,6 +264,7 @@ function checkNumberWithinRange({ number }) {
         throw new Error("Please enter a number");
     }
 
+    //use absolutes Math.abs(100-inputs)
 
 };
 
@@ -336,7 +339,7 @@ function printOddFrom10To1() {
 // 24. Write a Javascript program to print the elements of a given array. Sample array : ["Javascript", 2.3, Date.now()]
 
 function printArray({ array }) {
-    const newArray = arrayParser(array);
+    const newArray = JSON.parse(array);
     return newArray.map(item => `<p class="output">${item}</p>`).join("");
 }
 
@@ -439,6 +442,8 @@ function nearestToTen({ first, second }) {
 // true
 // false
 
+//fix this one as well
+
 function integersWithinRange(inputs) {
     const array = [];
     Object.values(inputs).slice(0,2).forEach(number => {
@@ -454,6 +459,8 @@ function integersWithinRange(inputs) {
 // 29
 // 30
 // 0
+
+
 
 function between20To30({ first, second }) {
     if (first < 0 || second < 0) throw new Error("Negative Integer");
@@ -543,7 +550,7 @@ function differenceBetweenXYZ({ x, y, z }) {
 function distanceBetweenAToB(inputs) {
     const {distance, speedOne, speedTwo} = inputs;
     const time = distance / (+speedOne + +speedTwo);
-    return distance * speedTwo;
+    return time * speedTwo;
 }
 
 // 43. A cyclist rides from city A to city B. A fly flies from his shoulder. She flies to city B, flies to 
