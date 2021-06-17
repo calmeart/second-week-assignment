@@ -333,10 +333,11 @@ function printOddFrom10To1() {
     return array.map(item => `<p class="output">${item}</p>`).join("");
 }
 
-// 24. Write a Javascript program to print the elements of a given array. Sample array : ["Javascript", 2.3, Date.now]
+// 24. Write a Javascript program to print the elements of a given array. Sample array : ["Javascript", 2.3, Date.now()]
 
 function printArray({ array }) {
-    return array.split(",").map(item => `<p class="output">${item}</p>`).join("");
+    const newArray = arrayParser(array);
+    return newArray.map(item => `<p class="output">${item}</p>`).join("");
 }
 
 // 25. Write a Javascript program to check two non-negative integer values and return true if they have the same last digit. 
@@ -469,6 +470,7 @@ function between20To30({ first, second }) {
 // 2
 
 function countFiveInArray({ array }) {
+    array = arrayParser(array);
     return array.filter(item => item == "5").length;
 };
 
@@ -479,8 +481,13 @@ function countFiveInArray({ array }) {
 // 36. Write a Javascript program to check if the sequence of numbers 10, 20, 30 appears anywhere in a given array of integers. 
 
 function checkSequence({ array }) {
+    array = arrayParser(array);
+    console.log(array);
     return array.filter(number => number.toString().length === 2).join("").includes("102030");
 };
+
+// [1,0,2,0,3,0]
+// [1, 2, 3, 10, 20, 30]
 
 // 37. Write a Javascript program to check two given integers and return 11 if either one is 11. Return their sum or difference if sum or difference is 11.
 
@@ -682,6 +689,10 @@ function checkIfNumber(number) {
     
     number = Number(number);
     return !isNaN(number);
+}
+
+function arrayParser(string) {
+    return string.slice(1, string.length - 1).replaceAll('"', "").split(",");
 }
 
 // functions tree
