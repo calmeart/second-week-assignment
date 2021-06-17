@@ -1,0 +1,25 @@
+body {
+  margin-bottom: 100px;
+}
+
+.output {
+  margin: 0;
+}
+
+.error {
+  color: red;
+}
+
+h2 {
+  text-align: center;
+}
+
+body > div {
+  width: 800px;
+  margin: 20px auto;
+  border-top: 2px solid gray;
+}
+
+form {
+  margin-bottom: 1rem;
+}
